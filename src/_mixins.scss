@@ -1,0 +1,21 @@
+@use './_variables';
+
+@mixin flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin main-btn {
+    @include flexbox;
+    column-gap: 3px;
+    padding: 15px 37px;
+    border-radius: 15px;
+    background-color: variables.$main-color;
+    text-decoration: none;
+    font-family: Steinbeck;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color:rgba(60, 39, 16, 1);
+}
