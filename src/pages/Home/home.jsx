@@ -1,10 +1,12 @@
 // import home_style from './home.module.scss';
 
+import { Header } from "../../components/Header"
+
 
 export const Home = () => {
     return (
         <>
-            <h1>Hello World!</h1>
+            <Header/>
         </>
     )
 }

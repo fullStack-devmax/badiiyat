@@ -1,0 +1,55 @@
+@use '../../_mixins.scss';
+@use '../../_variables.scss';
+
+header{
+    padding: 54px 0 14px;
+    .hero{
+      position: relative;
+      &_btn{
+        @include mixins.main-btn;
+      }
+      &_search{
+        position: absolute;
+        left: 192px;
+        top: 305px;
+        z-index: 100;
+        width: calc(1114px - (85px + 144px));
+        display:flex;
+        flex-direction: column;
+        padding: 40px 85px 35px 144px;
+        box-shadow: 0px 4px 77px 0px rgba(0, 0, 0, 0.25);
+        border-radius:15px;
+        background-color:variables.$secondary-color;
+        h2{
+          padding-bottom: 14px;
+          text-align: center;
+          font-family: Rotterburg Stylish FREE;
+          font-weight: 400;
+          font-size: 31px;
+          line-height: 100%;
+          color: variables.$main-color;
+        }
+        form{
+          display: flex;
+          align-items:center;
+          justify-content: center;
+          column-gap: 14px;
+        }
+        input{
+          padding: 16px 403px 14px 27px;
+          outline: none;
+          border: none;
+          border-radius: 15px;
+          background-color: rgba(64, 64, 64, 1);
+          &::placeholder{
+            font-family: Steinbeck;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            color: rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
+    }
+}
+  
