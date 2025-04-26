@@ -1,0 +1,1 @@
+export {Scientist} from './scientist.jsx';
