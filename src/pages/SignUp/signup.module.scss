@@ -1,0 +1,62 @@
+@use '../../_variables.scss';
+
+.signup{
+    &_leftSide{
+        height: 100vh;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: variables.$main-color;
+    }
+    &_rightSide{
+        height: 100vh;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        background-color: variables.$fourth-color;
+        h1{
+            font-family: Arial Black;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 100%;
+            color: black;
+        }
+        p{
+            padding: 17px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: center;
+            row-gap: 17px;
+            input{
+                padding: 15px;
+                width: 330px;
+                border-radius: 10px;
+                border: 1px solid #8080805e;
+                outline: none;
+                ::placeholder{
+                    color: #8080805e;
+                }
+            }
+            button{
+                padding: 5px;
+                width: 328px;
+                border-radius: 99px;
+                background-color: rgba(21, 37, 64, 1);
+                font-family: Red Hat Display;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 36px;
+                text-align: center;
+                vertical-align: middle;
+                color: variables.$fourth-color;
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import navbarSL from './navbar.module.scss';
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import badiiyat from '../../assets/svg/Badiiyat.svg'
 
@@ -16,11 +16,54 @@ export const Navbar = () => {
                         <img src={badiiyat} alt="" />
                     </div>
                     <div className={navbarSL.main_navbar_flexbox__menu}>
-                        <Link className={navbarSL.main_navbar_flexbox__menu_item} to='/'>Bosh sahifa</Link>
-                        <Link className={navbarSL.main_navbar_flexbox__menu_item} to='/'>Nasr</Link>
-                        <Link className={navbarSL.main_navbar_flexbox__menu_item} to='/'>Nazm</Link>
-                        <Link className={navbarSL.main_navbar_flexbox__menu_item} to='/'>Maqolalar</Link>
-                        <Link className={navbarSL.main_navbar_flexbox__menu_item} to='/'>Forum</Link>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) => 
+                            isActive 
+                              ? `${navbarSL.main_navbar_flexbox__menu_item} active` 
+                              : navbarSL.main_navbar_flexbox__menu_item
+                          }
+                        >Bosh sahifa</NavLink>
+                        <NavLink
+                          to="/books"
+                          className={({ isActive }) => 
+                            isActive 
+                              ? `${navbarSL.main_navbar_flexbox__menu_item} active` 
+                              : navbarSL.main_navbar_flexbox__menu_item
+                          }
+                        >Kitoblar</NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) => 
+                            isActive 
+                              ? `${navbarSL.main_navbar_flexbox__menu_item} active` 
+                              : navbarSL.main_navbar_flexbox__menu_item
+                          }
+                        >Nasr</NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) => 
+                            isActive 
+                              ? `${navbarSL.main_navbar_flexbox__menu_item} active` 
+                              : navbarSL.main_navbar_flexbox__menu_item
+                          }
+                        >Nazm</NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) => 
+                            isActive 
+                              ? `${navbarSL.main_navbar_flexbox__menu_item} active` 
+                              : navbarSL.main_navbar_flexbox__menu_item
+                          }
+                        >Maqolalar</NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) => 
+                            isActive 
+                              ? `${navbarSL.main_navbar_flexbox__menu_item} active` 
+                              : navbarSL.main_navbar_flexbox__menu_item
+                          }
+                        >Forum</NavLink>
                     </div>
                     <div className={navbarSL.main_navbar_flexbox__privside}>
                         <Link className={navbarSL.main_navbar_flexbox__privside_btn} to='/'>

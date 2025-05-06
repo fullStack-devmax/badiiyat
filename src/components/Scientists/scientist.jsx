@@ -1,15 +1,19 @@
 import scientist_style from './scientist.module.scss';
 
-import avloniy from '../../assets/img/avloniy.png'
+import { Link } from 'react-router-dom';
+
+// import avloniy from '../../assets/img/avloniy.png'
 
 
-export const Scientist = () => {
+export const Scientist = ({key, id, fullName, birthDate}) => {
+  // console.log(fullName);
+  
     return (
-        <div className={scientist_style.scientistComp}>
-          <img className={scientist_style.scientistComp_img} src={avloniy} alt="avloniy" />
+        <Link to={`/scientist/:${id}`} key={key} id={id} className={scientist_style.scientistComp}>
+          {/* <img className={scientist_style.scientistComp_img} src={avloniy} alt="avloniy" /> */}
           <div className={scientist_style.scientistComp_info}>
-            <h3>Abdulla Avloniy</h3>
-            <p>1878-1934</p>
+            <h3>{fullName}</h3>
+            <p>{new Date(birthDate).toLocaleDateString()}</p>
             <div className={scientist_style.scientistComp_info__stats}>
               <div>
                 <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,6 +30,6 @@ export const Scientist = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Link>
     )
 }
